@@ -5,6 +5,7 @@
 # Download WAMP at https://sourceforge.net/projects/wampserver/files/WampServer 2/Wampserver 2.5/ and install it,
   e.g. D drive
 # Copy files bin/*.* to D:/wamp/bin/php/php5.5.12
+# Copy files system/*.* to CodeIgniter system folder, e.g. D:/A20P52/www/pwater/system
 # To create Bash aliases, copy the file .bash_profile to %userprofile% (e.g. C:/Users/tuan_dung)
 # Now, open Git Bash and run the following command: phpunit --version
 
