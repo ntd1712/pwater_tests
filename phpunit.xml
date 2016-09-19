@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         verbose="true">
+    <testsuites>
+        <testsuite name="all">
+            <directory suffix="Test.php">tests/application/core</directory>
+            <directory suffix="Test.php">tests/application/helpers</directory>
+            <directory suffix="Test.php">tests/application/hooks</directory>
+            <directory suffix="Test.php">tests/application/libraries</directory>
+            <directory suffix="Test.php">tests/application/models</directory>
+        </testsuite>
+        <testsuite name="core">
+            <directory suffix="Test.php">tests/application/core</directory>
+        </testsuite>
+        <testsuite name="helpers">
+            <directory suffix="Test.php">tests/application/helpers</directory>
+        </testsuite>
+        <testsuite name="hooks">
+            <directory suffix="Test.php">tests/application/hooks</directory>
+        </testsuite>
+        <testsuite name="libraries">
+            <directory suffix="Test.php">tests/application/libraries</directory>
+        </testsuite>
+        <testsuite name="models">
+            <directory suffix="Test.php">tests/application/models</directory>
+        </testsuite>
+        <testsuite name="_admin">
+            <directory suffix="Test.php">tests/application/widgets/_admin</directory>
+        </testsuite>
+        <testsuite name="_cgi">
+            <directory suffix="Test.php">tests/application/widgets/_cgi</directory>
+        </testsuite>
+        <testsuite name="_staff">
+            <directory suffix="Test.php">tests/application/widgets/_staff</directory>
+        </testsuite>
+        <testsuite name="boothregist">
+            <directory suffix="Test.php">tests/application/widgets/boothregist</directory>
+        </testsuite>
+        <testsuite name="campaign">
+            <directory suffix="Test.php">tests/application/widgets/campaign</directory>
+        </testsuite>
+        <testsuite name="communication">
+            <directory suffix="Test.php">tests/application/widgets/communication</directory>
+        </testsuite>
+        <testsuite name="cron">
+            <directory suffix="Test.php">tests/application/widgets/cron</directory>
+        </testsuite>
+        <testsuite name="landing">
+            <directory suffix="Test.php">tests/application/widgets/landing</directory>
+        </testsuite>
+        <testsuite name="mypage">
+            <directory suffix="Test.php">tests/application/widgets/mypage</directory>
+        </testsuite>
+        <testsuite name="outside">
+            <directory suffix="Test.php">tests/application/widgets/outside</directory>
+        </testsuite>
+        <testsuite name="registration">
+            <directory suffix="Test.php">tests/application/widgets/registration</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">system</directory>
+            <exclude>
+                <directory suffix=".php">catalogapp</directory>
+                <directory suffix=".php">temp</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <php>
+        <const name="PHPUNIT_TESTSUITE" value="true"/>
+    </php>
+</phpunit>
