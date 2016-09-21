@@ -10,6 +10,8 @@ abstract class Ci_Framework_TestCase extends \PHPUnit_Framework_TestCase
     protected $CI;
     /** @var \Faker\Generator */
     protected $faker;
+    /** @var bool */
+    protected $debug = false;
 
     /** {@inheritdoc} */
     protected function setUp()
@@ -35,9 +37,23 @@ abstract class Ci_Framework_TestCase extends \PHPUnit_Framework_TestCase
     protected function tearDown()
     {
         \Mockery::close();
-        echo $this->CI->db->last_query();
-        echo PHP_EOL . PHP_EOL;
+
+        if ($this->debug)
+        {
+            echo $this->CI->db->last_query();
+            echo PHP_EOL . PHP_EOL;
+        }
 
         parent::tearDown();
     }
+}
+
+/**
+ * Class Model_TestCase
+ * @author tuan_dung
+ */
+abstract class Model_TestCase extends \Ci_Framework_TestCase
+{
+    /** @var bool */
+    protected $debug = true;
 }

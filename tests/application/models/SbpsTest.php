@@ -3,7 +3,7 @@
 /**
  * Class SbpsTest
  */
-class SbpsTest extends \Ci_Framework_TestCase
+class SbpsTest extends \Model_TestCase
 {
     /**
      * [11318][12027][12036][CRE] - [tuan_dung] - [21/06/2016] - CS01_09 - Write log to settlement_sbps_detail_log_purchase table - UT Test

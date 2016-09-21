@@ -3,7 +3,7 @@
 /**
  * Class ContractTest
  */
-class ContractTest extends \Ci_Framework_TestCase
+class ContractTest extends \Model_TestCase
 {
     /**
      * [11318][12408][12410][CRE] - [tuan_dung] - [07/07/2016] - Create cron request purchase on 06:00 AM - UT Test
