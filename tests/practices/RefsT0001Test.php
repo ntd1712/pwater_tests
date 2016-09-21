@@ -28,6 +28,8 @@ class RefsT0001Test extends \Ci_Framework_TestCase
         // But sadly, in CLI (Command Line Interface) both these methods return FALSE.
         $result = $this->CI->upload->do_upload('userfile');
         $this->assertFalse($result);
+
+        print_r($this->CI->upload->fail_data());
     }
 
     /** {@inheritdoc} */
