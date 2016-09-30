@@ -23,7 +23,7 @@
 # PHPUnit Support in PhpStorm 2016
 ####################
 
-# https://www.jetbrains.com/help/phpstorm/2016.2/enabling-phpunit-support.html
+# Follow the steps here: https://www.jetbrains.com/help/phpstorm/2016.2/enabling-phpunit-support.html
 # Screenshot: phpstorm_settings.png
 
 ####################
@@ -32,7 +32,7 @@
 
 # Update Eclipse IDE to SR2 (4.4.2) at Help > Check for Updates.
 # Install MakeGood from Help > Eclipse Marketplace.
-# http://maruhgar.blogspot.com/2014/06/setting-up-and-running-php-unit-tests_26.html
+# Follow the steps here: http://maruhgar.blogspot.com/2014/06/setting-up-and-running-php-unit-tests_26.html
 # Screenshot: eclipse_settings.png
 
 ####################
