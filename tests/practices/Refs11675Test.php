@@ -1,5 +1,4 @@
 <?php
-
 /**
  * [11318][11675][11724][CRE] - [tuan_dung] - [06/06/2016] - CS01_02 - Create common function for SBPS Library - UT Test
  */

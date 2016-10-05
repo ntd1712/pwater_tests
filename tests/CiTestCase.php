@@ -1,5 +1,10 @@
 <?php
 
+if (!class_exists('Faker\Factory') || !class_exists('Mockery'))
+{
+    require_once __DIR__ . '/../vendor/autoload.php';
+}
+
 /**
  * Class Ci_Framework_TestCase
  * @author tuan_dung
