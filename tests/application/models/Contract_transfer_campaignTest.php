@@ -23,7 +23,7 @@ class Contract_transfer_campaignTest extends \Ci_Framework_TestCase
                     array (
                         array(
                             array(
-                                'amount' => '',    
+                                'amount' => '',
                                 'status' => false,
                             ),
                             array(
@@ -32,15 +32,15 @@ class Contract_transfer_campaignTest extends \Ci_Framework_TestCase
                             ),
                             array(
                                 'amount' => '242,210',
-                                'status' => true,
+                                'status' => '242210',
                             ),
                             array(
                                 'amount' => '242.184',
-                                'status' => true,
+                                'status' => '242184',
                             ),
                             array(
                                 'amount' => '10000',
-                                'status' => true,
+                                'status' => '10000',
                             ),
                         ),
                     )
@@ -69,23 +69,66 @@ class Contract_transfer_campaignTest extends \Ci_Framework_TestCase
                         'date' => '2016.10.11',
                         'status' => false,
                     ),
-                    array(
+                    /*array(
                         'date' => '1-10-11',
-                        'status' => true,
-                    ),
+                        'status' => false,
+                    ),*/
                     array(
                         'date' => '20161011',
-                        'status' => true,
+                        'status' => '2016-10-11',
                     ),
                     array(
                         'date' => '2016-10-11',
-                        'status' => true,
+                        'status' => '2016-10-11'
                     ),
                     array(
                         'date' => '2016:10:11',
-                        'status' => true,
+                        'status' => '2016-10-11',
                     ),
                 ),
+            )
+        );
+    }
+
+    /**
+     * test sort
+     * @dataProvider sort_data_provider
+     */
+    public function test_sort_table_base_on_column ($data) {
+        $expected_result = array(
+            array(
+                'cash_back_date' => '2016-10-07'
+            ),
+            array(
+                'cash_back_date' => '2016-10-09'
+            ),
+            array(
+                'cash_back_date' => '2016-10-11'
+            ),
+            array(
+                'cash_back_date' => '2016-10-13'
+            ),
+        );
+        $result = $this->CI->contract_transfer_campaign->sort_table_base_on_column($data, 'cash_back_date', 'ASC');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function sort_data_provider () {
+        return array(
+            array(
+                array(
+                    array(
+                        'cash_back_date' => '2016-10-11'
+                    ),
+                    array(
+                        'cash_back_date' => '2016-10-09'
+                    ),
+                    array(
+                        'cash_back_date' => '2016-10-13'
+                    ),
+                    array(
+                        'cash_back_date' => '2016-10-07'
+                    )
+                )
             )
         );
     }
@@ -94,7 +137,7 @@ class Contract_transfer_campaignTest extends \Ci_Framework_TestCase
      * check insert
      * @dataProvider contract_transfer_campaign_data_provider
      */
-    /*public function test_insert_contract_transfer_campaign_by_contract_id ($data) {
+    public function test_insert_contract_transfer_campaign_by_contract_id ($data) {
         $result = $this->CI->contract_transfer_campaign->_insert_contract_transfer_campaign_by_contract_id($data);
         $this->assertTrue($result);
     }
@@ -108,7 +151,7 @@ class Contract_transfer_campaignTest extends \Ci_Framework_TestCase
                         ),
                     )
                 );
-    }*/
+    }
 
     /**
      * check update
@@ -129,4 +172,6 @@ class Contract_transfer_campaignTest extends \Ci_Framework_TestCase
             )
         );
     }
+
+
 }
